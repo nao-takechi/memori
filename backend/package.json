@@ -1,0 +1,22 @@
+{
+  "name": "memori-backend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.24.0",
+    "nodemon": "^3.1.9",
+    "typescript": "~5.7.2",
+    "vitest": "^3.1.1"
+  }
+}
