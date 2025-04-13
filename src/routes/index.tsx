@@ -1,10 +1,10 @@
 import { RouteObject } from "react-router-dom";
-import Daily from "../pages/Daily";
+import Top from "../pages/Top";
 
 const routes: RouteObject[] = [
   {
-    path: "/daily",
-    element: <Daily />,
+    path: "/",
+    element: <Top />,
   },
 ];
 
