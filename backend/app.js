@@ -1,5 +1,4 @@
 import express from "express";
-import bodyParser from "body-parser";
 import axios from "axios";
 import { PrismaClient } from "@prisma/client";
 import "dotenv/config";
@@ -8,12 +7,6 @@ import "dotenv/config";
 const app = express();
 const prisma = new PrismaClient();
 const port = process.env.PORT || 3000;
-
-// LINEのチャネルアクセストークン
-const CHANNEL_ACCESS_TOKEN = process.env.CHANNEL_ACCESS_TOKEN;
-
-// Webhookのエンドポイントの設定
-app.use(bodyParser.json());
 
 // Webhookエンドポイント
 app.post("/callback", async (req, res) => {
