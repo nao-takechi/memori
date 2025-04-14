@@ -5,11 +5,11 @@ const prisma = new PrismaClient();
 const router: Router = Router();
 
 router.post("/", async (req, res) => {
-  const { text } = req.body;
-  if (!text) return res.status(400).json({ error: "text is required" });
+  const { diary } = req.body;
+  if (!diary) return res.status(400).json({ error: "text is required" });
 
   const result = await prisma.diary.create({
-    data: { text },
+    data: { diary: diary },
   });
 
   res.json(result);
